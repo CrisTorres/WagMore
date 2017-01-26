@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+input[type=text], input[type=password] {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: green;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 200px;
+    height: 200px;
+}
+
+.container {
+    padding: 10px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 10px;
+}
+
+.modal {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 20px;
+}
+
+.modal-content {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 32%;
+}
+
+.close {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+h2 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+</style>
+
+    <body onload="dynamicClock()">
+
+    <center>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <img src="http://127.0.0.1:8000/testing/static/_2.14.6/images/wagMoreLogo.png" width="420" height="300" alt="Woof!">
+        <br>
+        <img src="http://127.0.0.1:8000/testing/static/_2.14.6/images/login.png" width="250" height="250" alt="Login!" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+        <a href="http://127.0.0.1:8000/testing/default/signuppage"><img src="http://127.0.0.1:8000/testing/static/_2.14.6/images/signup.png" width="250" height="250" alt="Sign up and wag!!" onclick="document.getElementById('id02').style.display='block'" style="width:auto;"></a>
+    </center>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="http://127.0.0.1:8000/testing/static/_2.14.6/images/login_dogperson.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label><b>username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">login</button>
+      <input type="checkbox" checked="checked"> remember me
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">cancel</button>
+      <span class="psw">forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+var getLogin = document.getElementById('id01');
+
+window.onclick = function(event) {
+    if (event.target == getLogin) { getLogin.style.display = "none"; }
+}
+
+function click (uClick) {
+  if (!uClick) { uClick = window.event; }
+  if ((uClick.type && uClick.type == "contextmenu") || (uClick.button && uClick.button == 2) || (uClick.which && uClick.which == 3)) {
+    if (window.opera) { window.alert(""); }
+    return false;
+  }
+}
+if (document.layers) { document.captureEvents(Event.MOUSEDOWN); }
+    
+document.onmousedown = click;
+document.oncontextmenu = click;
+        </script>
+
+</body>
+</html>
