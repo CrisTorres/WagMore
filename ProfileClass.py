@@ -34,7 +34,7 @@ def aver(Profile1, trait1, Profile2, trait2):
     return math.ceil((min(Profile1.adven, Profile2.adven)/max(Profile1.adven, Profile2.adven)) * 100)
 
 # averAll returns the overall match percentage based on personalities
-def averAll(Profile1, trait1, Profile2, trait2):
+def averAll(Profile1, Profile2):
     for i in Profile1.personalities and Profile2.personalities:
         return math.ceil((min(Profile1.personalities[i], Profile2.personalities[i]) / max(Profile1.personalities[i], Profile2.personalities[i]))
                          * 100)
@@ -57,7 +57,7 @@ def averInterests(Profile1, interests1, Profile2, interests2):
     interestsPercentage = math.ceil((interestsCount/(max(len(interests1), len(interests2)))) * 100)
     return interestsPercentage
 
-"""
+""""
 # here I test the classes + algorithms:
 Jimbob = Profile("JimBob", "Steve", "Santa Cruz", 2, 3, 10)
 Marylou = Profile("MaryLou", "Juju", "Santa Cruz", 2, 2, 8)
@@ -84,5 +84,5 @@ Jimbob.add_interestCollage("tennis")
 Jimbob.add_interestCollage("hiking")
 Jimbob.add_interestCollage("mario")
 print(averInterests(Jimbob, Jimbob.interests, Marylou, Marylou.interests)) #should print 40
-print(averAll(Jimbob, Jimbob.adven, Marylou, Marylou.adven)) #should print 80 -> Jimbob & Marylou have 80% overall match
+print(averAll(Jimbob, Marylou)) #should print 80 -> Jimbob & Marylou have 80% overall match
 """
