@@ -128,13 +128,30 @@ auth.settings.reset_password_requires_verification = True
 # >>> for row in rows: print row.id, row.myfield
 # -------------------------------------------------------------------------
 
-db.define_table(
+print db.define_table(
+    'test1',
+    Field('id'),
+	Field('owner_id', 'integer'),
+	Field('filename'))
+	
+print db.define_table(
     'members',
     Field('id'),
 	Field('username'),
 	Field('name'))
-    #Field('email'),
-    #format = '%(name)s')
+	
+print db.define_table(
+    'friends1',
+    Field('id'),
+	Field('user1', 'integer'),
+	Field('user2', 'integer'))
+
+db.define_table(
+    'images1',
+    Field('id'),
+	Field('owner_id', 'integer'),
+	Field('filename'))
+	
 # -------------------------------------------------------------------------
 # after defining tables, uncomment below to enable auditing
 # -------------------------------------------------------------------------
