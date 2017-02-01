@@ -21,9 +21,9 @@ def index():
     response.flash = T("Hello World")
     #db.define_table('members',Field('id'))
     #db = DAL ('sqlite://storage.sqlite')
-    print db.members.insert(id = 1)
-    print db.members.insert(id = 2)
-    print db(db.members.id == 1)._update()
+    print db.members.insert(username = 'hello', name = 'world')
+    #print db.friends.insert()
+    print db.friends1.insert(user1 = 1, user2 = 2)
     return dict(message=T('Welcome to web2py!'))
 
 
