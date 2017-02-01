@@ -130,7 +130,9 @@ auth.settings.reset_password_requires_verification = True
 
 db.define_table(
     'members',
-    Field('id'))
+    Field('id'),
+	Field('username'),
+	Field('name'))
     #Field('email'),
     #format = '%(name)s')
 # -------------------------------------------------------------------------
