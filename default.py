@@ -7,25 +7,24 @@
 # - user is required for authentication and authorization
 # - download is for downloading files uploaded in the db (does streaming)
 # -------------------------------------------------------------------------
-from datetime import datetime
+
 
 def index():
-    return dict()
+    """
+    example action using the internationalization operator T and flash
+    rendered by views/default/index.html or views/generic.html
 
-def first():
-    return dict()
+    if you need a simple wiki simply replace the two lines below with:
+    return auth.wiki()
+    """
 
-def second():
-    return dict()
-
-def loginpage():
-    return dict()
-
-def signuppage():
-    return dict()
-
-def signuppage2():
-    return dict()
+    response.flash = T("Hello World")
+    #db.define_table('members',Field('id'))
+    #db = DAL ('sqlite://storage.sqlite')
+    print db.members.insert(username = 'hello', name = 'world')
+    #print db.friends.insert()
+    print db.friends1.insert(user1 = 1, user2 = 2)
+    return dict(message=T('Welcome to web2py!'))
 
 
 def user():
@@ -64,3 +63,5 @@ def call():
     supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv
     """
     return service()
+
+
