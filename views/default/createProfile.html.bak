@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Create a profile</title>
+  <link rel="stylesheet" href="http://127.0.0.1:8000/WagMore/static/_2.14.6/css/create_profile.css">
+
+</head>
+<body>
+	<div >
+		<img alt="Error" src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/create_prof.png">
+	</div>
+   
+ </body>
+</html>

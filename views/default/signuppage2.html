@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>What is Wag More?</title>
+  <style>
+      
+  div {
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 771px;
+    display: none;
+    height: 200px;
+  }
+  #one {
+    background-image: url(http://127.0.0.1:8000/WagMore/static/_2.14.6/images/step1_sentence.png);
+  }
+  #two {
+    background-image: url(http://127.0.0.1:8000/WagMore/static/_2.14.6/images/step2_sentence.png);
+  }
+  #three {
+    background-image: url(http://127.0.0.1:8000/WagMore/static/_2.14.6/images/step3_sentence.png);
+  }
+  #four {
+    background-image: url(http://127.0.0.1:8000/WagMore/static/_2.14.6/images/step4_sentence.png);
+  }
+  #five {
+    background-image: url(http://127.0.0.1:8000/WagMore/static/_2.14.6/images/makeProfile2.png);
+  }
+
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+    <a href="http://127.0.0.1:8000/WagMore/default/createProfile"><div id="five"></div></a>
+    
+ 
+    <script>
+        $( document.body ).ready(function() {
+            $( "div:hidden:first").fadeIn(500);
+            $( "div:hidden:first").delay(1000).fadeIn(500);
+            $( "#three").delay(2000).fadeIn(500);
+                        $( "#four").delay(3000).fadeIn(500);
+                                    $( "#five").delay(4000).fadeIn(500);
+
+
+
+        });
+    </script>
+ </body>
+</html>

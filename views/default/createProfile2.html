@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Create profile</title>
+  {{response.files.append(URL('static','css/create_profile.css'))}}
+  {{include 'web2py_ajax.html'}}
+
+</head>
+
+<body>
+
+	<div id="header">
+		<a href="http://127.0.0.1:8000/WagMore/default/loginpage">
+	    	<img id="logo" src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/wagMoreLogo.png"
+	    	width="300" height="215" alt="Woof!">
+	    </a>
+	    <div id="title">
+			<h1>Create your profile</h1>
+
+		</div>
+	</div>
+	<center >
+		<img alt="Error" src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/uploadPictures.png", 
+		height="150px">
+	</center>	
+
+
+
+
+
+	<div id="info">
+		<a href="http://127.0.0.1:8000/WagMore/default/createProfile_interests">
+			<img alt="Error" src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/nextButton.png", height="150px">
+		</a>
+	</div>
+
+   
+ </body>
+</html>

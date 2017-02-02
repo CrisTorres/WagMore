@@ -1,0 +1,53 @@
+#infoPerson{
+		border: 3px dashed black;
+		background-color: lightblue;
+		width: 350px;
+		height: auto;
+		margin-left: 100px;
+		margin-right: 5px;
+		float:left;
+	}
+	#infoDog{
+		border: 3px dashed black;
+		background-color: lightblue;
+		width: 350px;
+		height: auto;
+		margin-right: 100px;
+		margin-left: 5px;
+		float:left;
+
+	}
+	#info{
+		display: flex;
+  		justify-content: center
+
+	}
+	.line{
+		clear:both;
+		float: left;
+		padding: 5px;
+	}
+	.form-group{
+		float:left;
+		padding-right: 5px;
+	}
+	.text{
+		float:left;
+		padding-right: 5px;
+	}
+	#logo{
+		position: absolute;
+	    left: 10px;
+	    top: 10px;
+	}
+	#title{
+		float:left;
+	}
+	center{
+		clear:both;
+	}
+	#header{
+		display: flex;
+  		justify-content: center;
+  		height:100px;
+	}

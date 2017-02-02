@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Create profile</title>
+    {{response.files.append(URL('static','css/create_profile.css'))}}
+    {{include 'web2py_ajax.html'}}
+</head>
+
+<body>
+	<div id="header">
+		<a href="http://127.0.0.1:8000/WagMore/default/loginpage">
+	    	<img id="logo" src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/wagMoreLogo.png"
+	    	width="300" height="215" alt="Woof!">
+	    </a>	
+	    <div id="title">
+			<h1>Create your profile</h1>
+
+		</div>
+	</div>
+
+	<center >
+		<img alt="Error" src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/profile2.png", 
+		height="150px">
+	</center>	
+	<center><img alt="Error" src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/login-dogperson.png" with="200px", height="200px"></center>
+	<div id="info">
+		<div id= "infoPerson">
+			<center><h3>About you</h3></center>
+            {{=form.custom.begin}}
+            Name: <div>{{=form.custom.widget.name}}</div>
+            Gender: <div>{{=form.custom.widget.gender}}</div>
+            Birth Date: <div>{{=form.custom.widget.birthDate}}</div>
+            City: <div>{{=form.custom.widget.city}}</div>
+            Interest: <div>{{=form.custom.widget.interest}}</div>
+		</div>
+		<div id= "infoDog">
+			<center><h3>About your dog</h3></center>
+            Dog's name: <div>{{=form.custom.widget.dogName}}</div>
+            Dog's gender: <div>{{=form.custom.widget.dogGender}}</div>
+            Dog's age: <div>{{=form.custom.widget.dogAge}}</div>
+			<div class="line">
+				<button type="button">Add another dog</button>
+			</div>
+            {{form.vars.userID2=10}}
+            {{=form.custom.submit}}
+            {{=form.custom.end}}
+		</div>
+
+	</div>
+	<div id="info">
+		<a href="http://127.0.0.1:8000/WagMore/default/createProfile2">
+			<img alt="Error" src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/nextButton.png", height="150px">
+		</a>
+	</div>
+   
+ </body>
+</html>

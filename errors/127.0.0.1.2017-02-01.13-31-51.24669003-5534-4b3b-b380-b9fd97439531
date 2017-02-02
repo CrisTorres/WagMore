@@ -1,0 +1,785 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.NameError'> name 'form' is not defined"
+p3
+sS'layer'
+p4
+S'C:\\Users\\Luis\\Desktop\\web2py\\applications\\WagMore\\views\\default/loginpage.html'
+p5
+sS'code'
+p6
+S'response.write(\'\\r\\n<script>\\r\\n    jQuery("#web2py_user_form input:visible:enabled:first").focus();\\r\\n\', escape=False)\nif request.args(0)==\'register\':\n    response.write("\\r\\n    web2py_validate_entropy(jQuery(\'#auth_user_password\'),100);\\r\\n", escape=False)\nelif request.args(0)==\'change_password\':\n    response.write("\\r\\n    web2py_validate_entropy(jQuery(\'#no_table_new_password\'),100);\\r\\n", escape=False)\n    pass\nresponse.write(\'\\r\\n</script>\\r\\n\', escape=False)\nresponse.write(\'\\r\\n\\r\\n<html>\\r\\n<style>\\r\\ninput[type=text], input[type=password] {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    width: 100%;\\r\\n    padding: 6px 10px;\\r\\n    margin: 8px 0;\\r\\n    display: inline-block;\\r\\n    border: 1px solid #ccc;\\r\\n    box-sizing: border-box;\\r\\n}\\r\\n\\r\\nbutton {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    background-color: green;\\r\\n    color: white;\\r\\n    padding: 14px 20px;\\r\\n    margin: 8px 0;\\r\\n    border: none;\\r\\n    cursor: pointer;\\r\\n    width: 100%;\\r\\n}\\r\\n\\r\\n.cancelbtn {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    width: auto;\\r\\n    padding: 10px 18px;\\r\\n    background-color: #f44336;\\r\\n}\\r\\n\\r\\n.imgcontainer {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    text-align: center;\\r\\n    margin: 24px 0 12px 0;\\r\\n    position: relative;\\r\\n}\\r\\n\\r\\nimg.avatar {\\r\\n    width: 200px;\\r\\n    height: 200px;\\r\\n}\\r\\n\\r\\n.container {\\r\\n    padding: 10px;\\r\\n}\\r\\n\\r\\nspan.psw {\\r\\n    float: right;\\r\\n    padding-top: 10px;\\r\\n}\\r\\n\\r\\n.modal {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    display: none;\\r\\n    position: fixed;\\r\\n    z-index: 1;\\r\\n    left: 0;\\r\\n    top: 0;\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n    overflow: auto;\\r\\n    background-color: rgb(0,0,0);\\r\\n    background-color: rgba(0,0,0,0.4);\\r\\n    padding-top: 20px;\\r\\n}\\r\\n\\r\\n.modal-content {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    background-color: #fefefe;\\r\\n    margin: 5% auto 15% auto;\\r\\n    border: 1px solid #888;\\r\\n    width: 32%;\\r\\n}\\r\\n\\r\\n.close {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    position: absolute;\\r\\n    right: 25px;\\r\\n    top: 0;\\r\\n    color: #000;\\r\\n    font-size: 35px;\\r\\n    font-weight: bold;\\r\\n}\\r\\n\\r\\n.close:hover,\\r\\n.close:focus {\\r\\n    color: red;\\r\\n    cursor: pointer;\\r\\n}\\r\\n\\r\\n.animate {\\r\\n    -webkit-animation: animatezoom 0.6s;\\r\\n    animation: animatezoom 0.6s\\r\\n}\\r\\n\\r\\n@-webkit-keyframes animatezoom {\\r\\n    from {-webkit-transform: scale(0)} \\r\\n    to {-webkit-transform: scale(1)}\\r\\n}\\r\\n    \\r\\n@keyframes animatezoom {\\r\\n    from {transform: scale(0)} \\r\\n    to {transform: scale(1)}\\r\\n}\\r\\n\\r\\n@media screen and (max-width: 300px) {\\r\\n    span.psw {\\r\\n       display: block;\\r\\n       float: none;\\r\\n    }\\r\\n    .cancelbtn {\\r\\n       width: 100%;\\r\\n    }\\r\\n}\\r\\n\\r\\nh2 {\\r\\n\\tfont-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n}\\r\\n\\r\\n\\r\\n</style>\\r\\n\\r\\n    <body onload="dynamicClock()">\\r\\n\\r\\n    <center>\\r\\n        &nbsp; &nbsp; &nbsp; &nbsp;\\r\\n        <img src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/wagMoreLogo.png" width="420" height="300" alt="Woof!">\\r\\n        <br>\\r\\n        <img src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/login.png" width="250" height="250" alt="Login!" onclick="document.getElementById(\\\'id01\\\').style.display=\\\'block\\\'" style="width:auto;">\\r\\n        <a href="http://127.0.0.1:8000/WagMore/default/signuppage"><img src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/signup.png" width="250" height="250" alt="Sign up and wag!!" onclick="document.getElementById(\\\'id02\\\').style.display=\\\'block\\\'" style="width:auto;"></a>\\r\\n    </center>\\r\\n\\r\\n<div id="id01" class="modal">\\r\\n  \\r\\n  <form class="modal-content animate" action="action_page.php">\\r\\n    <div class="imgcontainer">\\r\\n      <span onclick="document.getElementById(\\\'id01\\\').style.display=\\\'none\\\'" class="close" title="Close Modal">&times;</span>\\r\\n      <img src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/login_dogperson.png" alt="Avatar" class="avatar">\\r\\n    </div>\\r\\n    <div class="container">\\r\\n    <div class="row">\\r\\n        <div id="web2py_user_form" class="col-lg-6">\\r\\n        \', escape=False)\nif request.args(0)==\'login\':\n    if not \'register\' in auth.settings.actions_disabled:\n        form.add_button(T(\'Sign Up\'),URL(args=\'register\', vars={\'_next\': request.vars._next} if request.vars._next else None),_class=\'btn btn-default\')\n        pass\n    if not \'request_reset_password\' in auth.settings.actions_disabled:\n        form.add_button(T(\'Lost Password\'),URL(args=\'request_reset_password\'),_class=\'btn btn-default\')\n        pass\n    pass\nresponse.write(form)\nresponse.write(\'\\r\\n        </div>\\r\\n    </div>\\r\\n</div>\\r\\n\\r\\n    <div class="container">\\r\\n      <label><b>username</b></label>\\r\\n      <input type="text" placeholder="Enter Username" name="uname" required>\\r\\n\\r\\n      <label><b>password</b></label>\\r\\n      <input type="password" placeholder="Enter Password" name="psw" required>\\r\\n        \\r\\n      <button type="submit">login</button>\\r\\n      <input type="checkbox" checked="checked"> remember me\\r\\n    </div>\\r\\n\\r\\n    <div class="container" style="background-color:#f1f1f1">\\r\\n      <button type="button" onclick="document.getElementById(\\\'id01\\\').style.display=\\\'none\\\'" class="cancelbtn">cancel</button>\\r\\n      <span class="psw">forgot <a href="#">password?</a></span>\\r\\n    </div>\\r\\n  </form>\\r\\n</div>\\r\\n\\r\\n<script>\\r\\nvar getLogin = document.getElementById(\\\'id01\\\');\\r\\n\\r\\nwindow.onclick = function(event) {\\r\\n    if (event.target == getLogin) { getLogin.style.display = "none"; }\\r\\n}\\r\\n\\r\\nfunction click (uClick) {\\r\\n  if (!uClick) { uClick = window.event; }\\r\\n  if ((uClick.type && uClick.type == "contextmenu") || (uClick.button && uClick.button == 2) || (uClick.which && uClick.which == 3)) {\\r\\n    if (window.opera) { window.alert(""); }\\r\\n    return false;\\r\\n  }\\r\\n}\\r\\nif (document.layers) { document.captureEvents(Event.MOUSEDOWN); }\\r\\n    \\r\\ndocument.onmousedown = click;\\r\\ndocument.oncontextmenu = click;\\r\\n        </script>\\r\\n\\r\\n</body>\\r\\n</html>\\r\\n\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__hash__'
+p12
+S"<method-wrapper '__hash__' of exceptions.NameError object>"
+p13
+sS'__setattr__'
+p14
+S"<method-wrapper '__setattr__' of exceptions.NameError object>"
+p15
+sS'__reduce_ex__'
+p16
+S'<built-in method __reduce_ex__ of exceptions.NameError object>'
+p17
+sS'__getslice__'
+p18
+S"<method-wrapper '__getslice__' of exceptions.NameError object>"
+p19
+sS'__getitem__'
+p20
+S"<method-wrapper '__getitem__' of exceptions.NameError object>"
+p21
+sS'__setstate__'
+p22
+S'<built-in method __setstate__ of exceptions.NameError object>'
+p23
+sS'__reduce__'
+p24
+S'<built-in method __reduce__ of exceptions.NameError object>'
+p25
+sS'__str__'
+p26
+S"<method-wrapper '__str__' of exceptions.NameError object>"
+p27
+sS'__format__'
+p28
+S'<built-in method __format__ of exceptions.NameError object>'
+p29
+sS'__getattribute__'
+p30
+S"<method-wrapper '__getattribute__' of exceptions.NameError object>"
+p31
+sS'__class__'
+p32
+S"<type 'exceptions.NameError'>"
+p33
+sS'__unicode__'
+p34
+S'<built-in method __unicode__ of exceptions.NameError object>'
+p35
+sS'__delattr__'
+p36
+S"<method-wrapper '__delattr__' of exceptions.NameError object>"
+p37
+sS'__subclasshook__'
+p38
+S'<built-in method __subclasshook__ of type object>'
+p39
+sS'__repr__'
+p40
+S"<method-wrapper '__repr__' of exceptions.NameError object>"
+p41
+sS'args'
+p42
+S'("name \'form\' is not defined",)'
+p43
+sS'__dict__'
+p44
+S'{}'
+p45
+sS'__sizeof__'
+p46
+S'<built-in method __sizeof__ of exceptions.NameError object>'
+p47
+sS'__doc__'
+p48
+S"'Name not found globally.'"
+p49
+sS'__init__'
+p50
+S"<method-wrapper '__init__' of exceptions.NameError object>"
+p51
+sS'__new__'
+p52
+S'<built-in method __new__ of type object>'
+p53
+ssS'evalue'
+p54
+S"name 'form' is not defined"
+p55
+sS'request'
+p56
+cgluon.html
+XML_unpickle
+p57
+(S'squ\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>WagMore</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>default</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-15455d5f-132c-47d2-a7e0-1e04e3a37bc4<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_hithere</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-cca4928e-bddb-4abb-914c-27164f63aede<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_images</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-51a35296-495f-4b33-8ad5-194bf18c2c74<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_myapp</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-495b6fa5-3156-4283-a018-176de02d341d<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_newwag</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-1c6c6c04-f4a6-4f4b-b491-196bac30b68a<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_wagmore</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-d2c870c3-12f0-4fb8-a643-32b78ea6176f<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-553a8d36-7d49-421c-8fd5-b01481446dc2<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, sdch, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>es-ES,es;q=0.8,en;q=0.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>session_id_newwag=127.0.0.1-1c6c6c04-f4a6-4f4b-b491-196bac30b68a; session_id_welcome=127.0.0.1-553a8d36-7d49-421c-8fd5-b01481446dc2; session_id_hithere=127.0.0.1-cca4928e-bddb-4abb-914c-27164f63aede; session_id_images=127.0.0.1-51a35296-495f-4b33-8ad5-194bf18c2c74; session_id_myapp=127.0.0.1-495b6fa5-3156-4283-a018-176de02d341d; session_id_wagmore=127.0.0.1-d2c870c3-12f0-4fb8-a643-32b78ea6176f; session_id_admin=127.0.0.1-15455d5f-132c-47d2-a7e0-1e04e3a37bc4</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_REFERER</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/admin/default/edit/WagMore/models/db.py?id=models__db__py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_UPGRADE_INSECURE_REQUESTS</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/WagMore/default/loginpage</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>58895</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>Portatil-Luis</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\admin\\\\&#x27;, &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\welcome\\\\&#x27;, &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\myapp\\\\&#x27;, &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\Hithere\\\\&#x27;, &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\images\\\\&#x27;, &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\WagMore\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Luis\\Desktop\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x2d5e0d0: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;Portatil-Luis&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Luis\\Desktop\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip, deflate, sdch, br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>es-ES,es;q=0.8,en;q=0.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>session_id_newwag=127.0.0.1-1c6c6c04-f4a6-4f4b-b491-196bac30b68a; session_id_welcome=127.0.0.1-553a8d36-7d49-421c-8fd5-b01481446dc2; session_id_hithere=127.0.0.1-cca4928e-bddb-4abb-914c-27164f63aede; session_id_images=127.0.0.1-51a35296-495f-4b33-8ad5-194bf18c2c74; session_id_myapp=127.0.0.1-495b6fa5-3156-4283-a018-176de02d341d; session_id_wagmore=127.0.0.1-d2c870c3-12f0-4fb8-a643-32b78ea6176f; session_id_admin=127.0.0.1-15455d5f-132c-47d2-a7e0-1e04e3a37bc4</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_referer</td><td style="vertical-align:top;">:</td><td><div>http://127.0.0.1:8000/admin/default/edit/WagMore/models/db.py?id=models__db__py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_upgrade_insecure_requests</td><td style="vertical-align:top;">:</td><td><div>1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>Portatil-Luis</div></td></tr><tr><td><div>2002:a9e9:e012::a9e9:e012</div></td></tr><tr><td><div>169.233.224.18</div></td></tr><tr><td><div>fe80::683c:9d5f:8641:63a1%3</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>fe80::200:5efe:169.233.224.18%7</div></td></tr><tr><td><div>2002:a9e9:168d::a9e9:168d</div></td></tr><tr><td><div>fe80::6cbf:8821:e6c2:9c7f%13</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>192.168.56.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/WagMore/default/loginpage</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>58895</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/WagMore/default/loginpage</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>Portatil-Luis</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Luis\\Desktop\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.14.6-stable+timestamp.2016.05.10.00.21.47</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x01C6D0D0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x01F95308&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x0392F2F0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x01C6D0D0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x01F95308&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x0392F2F0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Luis\\Desktop\\web2py\\applications\\WagMore\\</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>loginpage</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\admin\\\\&#x27;, &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\welcome\\\\&#x27;, &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\myapp\\\\&#x27;, &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\Hithere\\\\&#x27;, &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\images\\\\&#x27;, &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\WagMore\\\\&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Luis\\Desktop\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x2d5e0d0: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;Portatil-Luis&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: False, &#x27;port&#x27;: 8000, &#x27;print_errors&#x27;: False, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;gae&#x27;: None, &#x27;password&#x27;: &#x27;******&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Luis\\Desktop\\web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>Portatil-Luis</div></td></tr><tr><td><div>2002:a9e9:e012::a9e9:e012</div></td></tr><tr><td><div>169.233.224.18</div></td></tr><tr><td><div>fe80::683c:9d5f:8641:63a1%3</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>fe80::200:5efe:169.233.224.18%7</div></td></tr><tr><td><div>2002:a9e9:168d::a9e9:168d</div></td></tr><tr><td><div>fe80::6cbf:8821:e6c2:9c7f%13</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>192.168.56.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.14.6-stable+timestamp.2016.05.10.00.21.47</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_scheduler</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_shell</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2017, 2, 1, 13, 31, 51, 511000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/WagMore/default/loginpage</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2017, 2, 1, 21, 31, 51, 511000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x0842A2B0&gt;</div></td></tr></table></div>'
+tRp58
+sS'frames'
+p59
+(lp60
+(dp61
+S'file'
+p62
+S'C:\\Users\\Luis\\Desktop\\web2py\\gluon\\restricted.py'
+p63
+sS'dump'
+p64
+(dp65
+S'environment'
+p66
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p67
+sS'ccode'
+p68
+S'<code object <module> at 03C3E1D0, file "C:\\User...ns\\WagMore\\views\\default/loginpage.html", line 1>'
+p69
+ssS'lnum'
+p70
+I227
+sS'lines'
+p71
+(dp72
+I224
+S'            ccode = code'
+p73
+sI225
+S'        else:'
+p74
+sI226
+S'            ccode = compile2(code, layer)'
+p75
+sI227
+S'        exec ccode in environment'
+p76
+sI228
+S'    except HTTP:'
+p77
+sI229
+S'        raise'
+p78
+sI230
+S'    except RestrictedError:'
+p79
+sI231
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p80
+sI222
+S'    try:'
+p81
+sI223
+S'        if isinstance(code, types.CodeType):'
+p82
+ssS'call'
+p83
+S'(code=\'response.write(\\\'\\\\r\\\\n<script>\\\\r\\\\n    jQuery("#web...pt>\\\\r\\\\n\\\\r\\\\n</body>\\\\r\\\\n</html>\\\\r\\\\n\\\', escape=False)\', environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'ASSIGNJS\': <function ASSIGNJS>, \'AppConfig\': <function AppConfig>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, ...}, layer=r\'C:\\Users\\Luis\\Desktop\\web2py\\applications\\WagMore\\views\\default/loginpage.html\')'
+p84
+sS'func'
+p85
+S'restricted'
+p86
+sa(dp87
+g62
+S'C:\\Users\\Luis\\Desktop\\web2py\\applications\\WagMore\\views\\default\\loginpage.html'
+p88
+sg64
+(dp89
+S'padding'
+p90
+S'undefined'
+p91
+sS'px'
+p92
+g91
+ssg70
+I17
+sg71
+(dp93
+I8
+S'response.write(\'\\r\\n\\r\\n<html>\\r\\n<style>\\r\\ninput[type=text], input[type=password] {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    width: 100%;\\r\\n    padding: 6px 10px;\\r\\n    margin: 8px 0;\\r\\n    display: inline-block;\\r\\n    border: 1px solid #ccc;\\r\\n    box-sizing: border-box;\\r\\n}\\r\\n\\r\\nbutton {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    background-color: green;\\r\\n    color: white;\\r\\n    padding: 14px 20px;\\r\\n    margin: 8px 0;\\r\\n    border: none;\\r\\n    cursor: pointer;\\r\\n    width: 100%;\\r\\n}\\r\\n\\r\\n.cancelbtn {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    width: auto;\\r\\n    padding: 10px 18px;\\r\\n    background-color: #f44336;\\r\\n}\\r\\n\\r\\n.imgcontainer {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    text-align: center;\\r\\n    margin: 24px 0 12px 0;\\r\\n    position: relative;\\r\\n}\\r\\n\\r\\nimg.avatar {\\r\\n    width: 200px;\\r\\n    height: 200px;\\r\\n}\\r\\n\\r\\n.container {\\r\\n    padding: 10px;\\r\\n}\\r\\n\\r\\nspan.psw {\\r\\n    float: right;\\r\\n    padding-top: 10px;\\r\\n}\\r\\n\\r\\n.modal {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    display: none;\\r\\n    position: fixed;\\r\\n    z-index: 1;\\r\\n    left: 0;\\r\\n    top: 0;\\r\\n    width: 100%;\\r\\n    height: 100%;\\r\\n    overflow: auto;\\r\\n    background-color: rgb(0,0,0);\\r\\n    background-color: rgba(0,0,0,0.4);\\r\\n    padding-top: 20px;\\r\\n}\\r\\n\\r\\n.modal-content {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    background-color: #fefefe;\\r\\n    margin: 5% auto 15% auto;\\r\\n    border: 1px solid #888;\\r\\n    width: 32%;\\r\\n}\\r\\n\\r\\n.close {\\r\\n    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n    position: absolute;\\r\\n    right: 25px;\\r\\n    top: 0;\\r\\n    color: #000;\\r\\n    font-size: 35px;\\r\\n    font-weight: bold;\\r\\n}\\r\\n\\r\\n.close:hover,\\r\\n.close:focus {\\r\\n    color: red;\\r\\n    cursor: pointer;\\r\\n}\\r\\n\\r\\n.animate {\\r\\n    -webkit-animation: animatezoom 0.6s;\\r\\n    animation: animatezoom 0.6s\\r\\n}\\r\\n\\r\\n@-webkit-keyframes animatezoom {\\r\\n    from {-webkit-transform: scale(0)} \\r\\n    to {-webkit-transform: scale(1)}\\r\\n}\\r\\n    \\r\\n@keyframes animatezoom {\\r\\n    from {transform: scale(0)} \\r\\n    to {transform: scale(1)}\\r\\n}\\r\\n\\r\\n@media screen and (max-width: 300px) {\\r\\n    span.psw {\\r\\n       display: block;\\r\\n       float: none;\\r\\n    }\\r\\n    .cancelbtn {\\r\\n       width: 100%;\\r\\n    }\\r\\n}\\r\\n\\r\\nh2 {\\r\\n\\tfont-family: "Helvetica Neue", Helvetica, Arial, sans-serif;\\r\\n}\\r\\n\\r\\n\\r\\n</style>\\r\\n\\r\\n    <body onload="dynamicClock()">\\r\\n\\r\\n    <center>\\r\\n        &nbsp; &nbsp; &nbsp; &nbsp;\\r\\n        <img src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/wagMoreLogo.png" width="420" height="300" alt="Woof!">\\r\\n        <br>\\r\\n        <img src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/login.png" width="250" height="250" alt="Login!" onclick="document.getElementById(\\\'id01\\\').style.display=\\\'block\\\'" style="width:auto;">\\r\\n        <a href="http://127.0.0.1:8000/WagMore/default/signuppage"><img src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/signup.png" width="250" height="250" alt="Sign up and wag!!" onclick="document.getElementById(\\\'id02\\\').style.display=\\\'block\\\'" style="width:auto;"></a>\\r\\n    </center>\\r\\n\\r\\n<div id="id01" class="modal">\\r\\n  \\r\\n  <form class="modal-content animate" action="action_page.php">\\r\\n    <div class="imgcontainer">\\r\\n      <span onclick="document.getElementById(\\\'id01\\\').style.display=\\\'none\\\'" class="close" title="Close Modal">&times;</span>\\r\\n      <img src="http://127.0.0.1:8000/WagMore/static/_2.14.6/images/login_dogperson.png" alt="Avatar" class="avatar">\\r\\n    </div>\\r\\n    <div class="container">\\r\\n    <div class="row">\\r\\n        <div id="web2py_user_form" class="col-lg-6">\\r\\n        \', escape=False)'
+p94
+sI9
+S"if request.args(0)=='login':"
+p95
+sI10
+S"    if not 'register' in auth.settings.actions_disabled:"
+p96
+sI11
+S"        form.add_button(T('Sign Up'),URL(args='register', vars={'_next': request.vars._next} if request.vars._next else None),_class='btn btn-default')"
+p97
+sI12
+S'        pass'
+p98
+sI13
+S"    if not 'request_reset_password' in auth.settings.actions_disabled:"
+p99
+sI14
+S"        form.add_button(T('Lost Password'),URL(args='request_reset_password'),_class='btn btn-default')"
+p100
+sI15
+S'        pass'
+p101
+sI16
+S'    pass'
+p102
+sI17
+S'response.write(form)'
+p103
+sI18
+S'response.write(\'\\r\\n        </div>\\r\\n    </div>\\r\\n</div>\\r\\n\\r\\n    <div class="container">\\r\\n      <label><b>username</b></label>\\r\\n      <input type="text" placeholder="Enter Username" name="uname" required>\\r\\n\\r\\n      <label><b>password</b></label>\\r\\n      <input type="password" placeholder="Enter Password" name="psw" required>\\r\\n        \\r\\n      <button type="submit">login</button>\\r\\n      <input type="checkbox" checked="checked"> remember me\\r\\n    </div>\\r\\n\\r\\n    <div class="container" style="background-color:#f1f1f1">\\r\\n      <button type="button" onclick="document.getElementById(\\\'id01\\\').style.display=\\\'none\\\'" class="cancelbtn">cancel</button>\\r\\n      <span class="psw">forgot <a href="#">password?</a></span>\\r\\n    </div>\\r\\n  </form>\\r\\n</div>\\r\\n\\r\\n<script>\\r\\nvar getLogin = document.getElementById(\\\'id01\\\');\\r\\n\\r\\nwindow.onclick = function(event) {\\r\\n    if (event.target == getLogin) { getLogin.style.display = "none"; }\\r\\n}\\r\\n\\r\\nfunction click (uClick) {\\r\\n  if (!uClick) { uClick = window.event; }\\r\\n  if ((uClick.type && uClick.type == "contextmenu") || (uClick.button && uClick.button == 2) || (uClick.which && uClick.which == 3)) {\\r\\n    if (window.opera) { window.alert(""); }\\r\\n    return false;\\r\\n  }\\r\\n}\\r\\nif (document.layers) { document.captureEvents(Event.MOUSEDOWN); }\\r\\n    \\r\\ndocument.onmousedown = click;\\r\\ndocument.oncontextmenu = click;\\r\\n        </script>\\r\\n\\r\\n</body>\\r\\n</html>\\r\\n\', escape=False)'
+p104
+ssg83
+S'()'
+p105
+sg85
+S'<module>'
+p106
+sasS'pyver'
+p107
+S'Python 2.7.9: C:\\Users\\Luis\\Desktop\\web2py\\web2py.exe (prefix: C:\\Python27)'
+p108
+sS'session'
+p109
+g57
+(S's|\t\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">auth</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">expiration</td><td style="vertical-align:top;">:</td><td><div>2592000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">hmac_key</td><td style="vertical-align:top;">:</td><td><div>fc2f6ad5-f95f-43c9-8b9d-9f61666543ea</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_visit</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2017, 2, 1, 13, 26, 49, 618000)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remember_me</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">email</td><td style="vertical-align:top;">:</td><td><div>luikserra@hotmail.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">first_name</td><td style="vertical-align:top;">:</td><td><div>Luis</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">id</td><td style="vertical-align:top;">:</td><td><div>1L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_name</td><td style="vertical-align:top;">:</td><td><div>Serra Garcia</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_id</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">reset_password_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">username</td><td style="vertical-align:top;">:</td><td><div>Lserraga</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user_groups</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">1</td><td style="vertical-align:top;">:</td><td><div>user_1</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr></table></div>'
+tRp110
+sS'etype'
+p111
+S"<type 'exceptions.NameError'>"
+p112
+sS'date'
+p113
+S'Wed Feb 01 13:31:51 2017'
+p114
+sS'response'
+p115
+g57
+(S's\xd8?\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x0842A5C0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_wagmore</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-d2c870c3-12f0-4fb8-a643-32b78ea6176f<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">form_label_separator</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">formstyle</td><td style="vertical-align:top;">:</td><td><div>bootstrap3_inline</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">logo</td><td style="vertical-align:top;">:</td><td><div><a class="navbar-brand" href="http://www.web2py.com/" id="web2py-logo"><b>web<span>2</span>py</b>&trade;&nbsp;</a></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div><table><tr><td><div>Inicio</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/WagMore/default/index</div></td></tr><tr><td><div><table></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Mis Sitios</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/site</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Esta Aplicaci\xc3\xb3n</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Design</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/design/WagMore</div></td></tr></table></div></td></tr><tr><td><div><li class="divider"></li></div></td></tr><tr><td><div><table><tr><td><div>Controlador</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/WagMore/controllers/default.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Vista</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/WagMore/views/default/loginpage.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Modelo BDD</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/WagMore/models/db.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Modelo "menu"</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/WagMore/models/menu.py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Config.ini</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/WagMore/private/appconfig.ini</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Dise\xc3\xb1o de p\xc3\xa1gina</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/WagMore/views/layout.html</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Hoja de estilo</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/edit/WagMore/static/css/web2py-bootstrap3.css</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Base de datos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/WagMore/appadmin/index</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Errores</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/errors/WagMore</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Acerca de</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>/admin/default/about/WagMore</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>web2py.com</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Descargas</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/download</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Soporte</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/support</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Demostraci\xc3\xb3n</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/demo_admin</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Ejemplos R\xc3\xa1pidos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/examples/default/examples</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>FAQ</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/AlterEgo</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>V\xc3\xaddeos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/videos/</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Aplicaciones Libres</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/appliances</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2py.com/plugins</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Recetas</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://web2pyslices.com/</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Documentaci\xc3\xb3n</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>#</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Online book</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book</div></td></tr></table></div></td></tr><tr><td><div><li class="divider"></li></div></td></tr><tr><td><div><table><tr><td><div>Prefacio</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/00</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Introducci\xc3\xb3n</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/01</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Python</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/02</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Resumen</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/03</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>El N\xc3\xbacleo</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/04</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Las Vistas</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/05</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Base de datos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/06</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Formularios y validadores</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/07</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Correo electr\xc3\xb3nico y SMS</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/08</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Control de Acceso</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/09</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Servicios</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/10</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Recetas AJAX</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/11</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Componentes y Plugins</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/12</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Recetas de despliegue</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/13</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Otras Recetas</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/14</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Helping web2py</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/book/default/chapter/15</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Buy web2py\'s book</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://stores.lulu.com/web2py</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Comunidad</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>None</div></td></tr><tr><td><div><table><tr><td><div><table><tr><td><div>Grupos</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://www.web2py.com/examples/default/usergroups</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Twitter</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://twitter.com/web2py</div></td></tr></table></div></td></tr><tr><td><div><table><tr><td><div>Chat en vivo</div></td></tr><tr><td><div>False</div></td></tr><tr><td><div>http://webchat.freenode.net/?channels=web2py</div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Your Name &lt;you@example.com&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>a cool new app</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>Web2py Web Framework</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>web2py</div></td></tr><tr><td><div>python</div></td></tr><tr><td><div>framework</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^default/\\w+\\.py$</div></td></tr><tr><td><div>^default/loginpage/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>2592000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_wagmore</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;C:\\\\Users\\\\Luis\\\\Desktop\\\\web2py\\\\applications\\\\WagMore\\\\sessions\\\\114\\\\017\\\\127.0.0.1-d2c870c3-12f0-4fb8-a643-32b78ea6176f&#x27;, mode &#x27;rb+&#x27; at 0x0394C0D0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>C:\\Users\\Luis\\Desktop\\web2py\\applications\\WagMore\\sessions\\127.0.0.1-d2c870c3-12f0-4fb8-a643-32b78ea6176f</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>9660bec9933e944cb6791810db04acf1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-d2c870c3-12f0-4fb8-a643-32b78ea6176f</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_wagmore</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_locked</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>WagMore</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">subtitle</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">title</td><td style="vertical-align:top;">:</td><td><div>Wagmore</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>default/loginpage.html</div></td></tr></table></div>'
+tRp116
+sS'locals'
+p117
+(dp118
+S'Service'
+p119
+S"<class 'gluon.tools.Service'>"
+p120
+sS'OBJECT'
+p121
+S"<class 'gluon.html.OBJECT'>"
+p122
+sS'SQLDB'
+p123
+S"<class 'pydal.base.DAL'>"
+p124
+sg109
+S"<Storage {'_formkey[profile/create]': ['98ebe333...gin]': ['c406e1a2-6271-4dcb-9a69-5ebf8d2622bf']}>"
+p125
+sS'LINK'
+p126
+S"<class 'gluon.html.LINK'>"
+p127
+sS'BR'
+p128
+S"<class 'gluon.html.BR'>"
+p129
+sS'local_import'
+p130
+S'<function <lambda>>'
+p131
+sS'OPTGROUP'
+p132
+S"<class 'gluon.html.OPTGROUP'>"
+p133
+sS'__package__'
+p134
+S'None'
+p135
+sS'PRE'
+p136
+S"<class 'gluon.html.PRE'>"
+p137
+sS'IS_INT_IN_RANGE'
+p138
+S"<class 'gluon.validators.IS_INT_IN_RANGE'>"
+p139
+sS'IS_LOWER'
+p140
+S"<class 'gluon.validators.IS_LOWER'>"
+p141
+sS'IS_STRONG'
+p142
+S"<class 'gluon.validators.IS_STRONG'>"
+p143
+sS'cache'
+p144
+S'<gluon.cache.Cache object>'
+p145
+sS'IS_IN_DB'
+p146
+S"<class 'gluon.validators.IS_IN_DB'>"
+p147
+sS'TAG'
+p148
+S'<gluon.html.__TAG__ object>'
+p149
+sS'SQLField'
+p150
+S"<class 'pydal.objects.Field'>"
+p151
+sS'mail'
+p152
+S'<gluon.tools.Mail object>'
+p153
+sS'BODY'
+p154
+S"<class 'gluon.html.BODY'>"
+p155
+sS'IS_DATE_IN_RANGE'
+p156
+S"<class 'gluon.validators.IS_DATE_IN_RANGE'>"
+p157
+sS'IFRAME'
+p158
+S"<class 'gluon.html.IFRAME'>"
+p159
+sS'URL'
+p160
+S'<function URL>'
+p161
+sS'__file__'
+p162
+S"r'C:\\Users\\Luis\\Desktop\\web2py\\applications\\WagMore\\views\\default/loginpage.html'"
+p163
+sS'db'
+p164
+S'<DAL uri="sqlite://storage.sqlite">'
+p165
+sS'auth'
+p166
+S'<gluon.tools.Auth object>'
+p167
+sS'P'
+S"<class 'gluon.html.P'>"
+p168
+sS'TFOOT'
+p169
+S"<class 'gluon.html.TFOOT'>"
+p170
+sS'XHTML'
+p171
+S"<class 'gluon.html.XHTML'>"
+p172
+sS'ON'
+p173
+S'True'
+p174
+sS'OL'
+p175
+S"<class 'gluon.html.OL'>"
+p176
+sS'TEXTAREA'
+p177
+S"<class 'gluon.html.TEXTAREA'>"
+p178
+sS'MENU'
+p179
+S"<class 'gluon.html.MENU'>"
+p180
+sS'IS_IMAGE'
+p181
+S"<class 'gluon.validators.IS_IMAGE'>"
+p182
+sS'EM'
+p183
+S"<class 'gluon.html.EM'>"
+p184
+sS'CODE'
+p185
+S"<class 'gluon.html.CODE'>"
+p186
+sS'HTTP'
+p187
+S"<class 'gluon.http.HTTP'>"
+p188
+sS'HR'
+p189
+S"<class 'gluon.html.HR'>"
+p190
+sS'IS_DATETIME'
+p191
+S"<class 'gluon.validators.IS_DATETIME'>"
+p192
+sS'STYLE'
+p193
+S"<class 'gluon.html.STYLE'>"
+p194
+sS'LABEL'
+p195
+S"<class 'gluon.html.LABEL'>"
+p196
+sS'CLEANUP'
+p197
+S"<class 'gluon.validators.CLEANUP'>"
+p198
+sS'plugins'
+p199
+S'<gluon.tools.PluginManager object>'
+p200
+sS'SELECT'
+p201
+S"<class 'gluon.html.SELECT'>"
+p202
+sS'CENTER'
+p203
+S"<class 'gluon.html.CENTER'>"
+p204
+sS'Auth'
+p205
+S"<class 'gluon.tools.Auth'>"
+p206
+sS'DEVELOPMENT_MENU'
+p207
+g174
+sS'__builtins__'
+p208
+S"{'ArithmeticError': <type 'exceptions.ArithmeticError'>, 'AssertionError': <type 'exceptions.AssertionError'>, 'AttributeError': <type 'exceptions.AttributeError'>, 'BaseException': <type 'exceptions.BaseException'>, 'BufferError': <type 'exceptions.BufferError'>, 'BytesWarning': <type 'exceptions.BytesWarning'>, 'DeprecationWarning': <type 'exceptions.DeprecationWarning'>, 'EOFError': <type 'exceptions.EOFError'>, 'Ellipsis': Ellipsis, 'EnvironmentError': <type 'exceptions.EnvironmentError'>, ...}"
+p209
+sS'HTML'
+p210
+S"<class 'gluon.html.HTML'>"
+p211
+sS'SQLFORM'
+p212
+S"<class 'gluon.sqlhtml.SQLFORM'>"
+p213
+sS'LOAD'
+p214
+S'<function LOAD>'
+p215
+sS'redirect'
+p216
+S'<function redirect>'
+p217
+sS'FIELDSET'
+p218
+S"<class 'gluon.html.FIELDSET'>"
+p219
+sS'IS_EQUAL_TO'
+p220
+S"<class 'gluon.validators.IS_EQUAL_TO'>"
+p221
+sS'embed64'
+p222
+S'<function embed64>'
+p223
+sS'IS_LIST_OF'
+p224
+S"<class 'gluon.validators.IS_LIST_OF'>"
+p225
+sS'INPUT'
+p226
+S"<class 'gluon.html.INPUT'>"
+p227
+sS'EMBED'
+p228
+S"<class 'gluon.html.EMBED'>"
+p229
+sS'_'
+S'<function _>'
+p230
+sS'myconf'
+p231
+S"{'forms': {'formstyle': 'bootstrap3_inline', 'se...': {'names': 'localhost:*, 127.0.0.1:*, *:*, *'}}"
+p232
+sS'H2'
+p233
+S"<class 'gluon.html.H2'>"
+p234
+sS'H3'
+p235
+S"<class 'gluon.html.H3'>"
+p236
+sS'AppConfig'
+p237
+S'<function AppConfig>'
+p238
+sS'H1'
+p239
+S"<class 'gluon.html.H1'>"
+p240
+sS'H6'
+p241
+S"<class 'gluon.html.H6'>"
+p242
+sS'H4'
+p243
+S"<class 'gluon.html.H4'>"
+p244
+sS'H5'
+p245
+S"<class 'gluon.html.H5'>"
+p246
+sS'UL'
+p247
+S"<class 'gluon.html.UL'>"
+p248
+sS'IS_UPPER'
+p249
+S"<class 'gluon.validators.IS_UPPER'>"
+p250
+sS'xmlescape'
+p251
+S'<function xmlescape>'
+p252
+sS'IS_TIME'
+p253
+S"<class 'gluon.validators.IS_TIME'>"
+p254
+sS'OPTION'
+p255
+S"<class 'gluon.html.OPTION'>"
+p256
+sS'TITLE'
+p257
+S"<class 'gluon.html.TITLE'>"
+p258
+sS'CRYPT'
+p259
+S"<class 'gluon.validators.CRYPT'>"
+p260
+sS'IS_EMPTY_OR'
+p261
+S"<class 'gluon.validators.IS_EMPTY_OR'>"
+p262
+sS'MARKMIN'
+p263
+S"<class 'gluon.html.MARKMIN'>"
+p264
+sS'__name__'
+p265
+S"'__restricted__'"
+p266
+sS'STRONG'
+p267
+S"<class 'gluon.html.STRONG'>"
+p268
+sS'COL'
+p269
+S"<class 'gluon.html.COL'>"
+p270
+sS'service'
+p271
+S'<gluon.tools.Service object>'
+p272
+sS'SCRIPT'
+p273
+S"<class 'gluon.html.SCRIPT'>"
+p274
+sS'TABLE'
+p275
+S"<class 'gluon.html.TABLE'>"
+p276
+sS'IS_IPV4'
+p277
+S"<class 'gluon.validators.IS_IPV4'>"
+p278
+sS'IS_LENGTH'
+p279
+S"<class 'gluon.validators.IS_LENGTH'>"
+p280
+sS'IS_IPV6'
+p281
+S"<class 'gluon.validators.IS_IPV6'>"
+p282
+sS'XML'
+p283
+S"<class 'gluon.html.XML'>"
+p284
+sS'B'
+S"<class 'gluon.html.B'>"
+p285
+sS'IMG'
+p286
+S"<class 'gluon.html.IMG'>"
+p287
+sS'SQLTABLE'
+p288
+S"<class 'gluon.sqlhtml.SQLTABLE'>"
+p289
+sS'IS_MATCH'
+p290
+S"<class 'gluon.validators.IS_MATCH'>"
+p291
+sS'IS_ALPHANUMERIC'
+p292
+S"<class 'gluon.validators.IS_ALPHANUMERIC'>"
+p293
+sS'SPAN'
+p294
+S"<class 'gluon.html.SPAN'>"
+p295
+sS'IS_JSON'
+p296
+S"<class 'gluon.validators.IS_JSON'>"
+p297
+sS'IS_IPADDRESS'
+p298
+S"<class 'gluon.validators.IS_IPADDRESS'>"
+p299
+sS'IS_SLUG'
+p300
+S"<class 'gluon.validators.IS_SLUG'>"
+p301
+sS'BEAUTIFY'
+p302
+S"<class 'gluon.html.BEAUTIFY'>"
+p303
+sS'META'
+p304
+S"<class 'gluon.html.META'>"
+p305
+sS'BUTTON'
+p306
+S"<class 'gluon.html.BUTTON'>"
+p307
+sS'IS_DATE'
+p308
+S"<class 'gluon.validators.IS_DATE'>"
+p309
+sS'IS_EMAIL'
+p310
+S"<class 'gluon.validators.IS_EMAIL'>"
+p311
+sS'IS_NOT_EMPTY'
+p312
+S"<class 'gluon.validators.IS_NOT_EMPTY'>"
+p313
+sS'IS_FLOAT_IN_RANGE'
+p314
+S"<class 'gluon.validators.IS_FLOAT_IN_RANGE'>"
+p315
+sS'TBODY'
+p316
+S"<class 'gluon.html.TBODY'>"
+p317
+sS'CAT'
+p318
+S"<class 'gluon.html.CAT'>"
+p319
+sS'Field'
+p320
+S"<class 'pydal.objects.Field'>"
+p321
+sS'IS_LIST_OF_EMAILS'
+p322
+S"<class 'gluon.validators.IS_LIST_OF_EMAILS'>"
+p323
+sS'DIV'
+p324
+S"<class 'gluon.html.DIV'>"
+p325
+sS'LEGEND'
+p326
+S"<class 'gluon.html.LEGEND'>"
+p327
+sS'COLGROUP'
+p328
+S"<class 'gluon.html.COLGROUP'>"
+p329
+sS'DAL'
+p330
+S"<class 'pydal.base.DAL'>"
+p331
+sS'ASSIGNJS'
+p332
+S'<function ASSIGNJS>'
+p333
+sS'TR'
+p334
+S"<class 'gluon.html.TR'>"
+p335
+sS'LI'
+p336
+S"<class 'gluon.html.LI'>"
+p337
+sS'TH'
+p338
+S"<class 'gluon.html.TH'>"
+p339
+sS'TD'
+p340
+S"<class 'gluon.html.TD'>"
+p341
+sS'PluginManager'
+p342
+S"<class 'gluon.tools.PluginManager'>"
+p343
+sS'IS_URL'
+p344
+S"<class 'gluon.validators.IS_URL'>"
+p345
+sS'A'
+S"<class 'gluon.html.A'>"
+p346
+sS'HEAD'
+p347
+S"<class 'gluon.html.HEAD'>"
+p348
+sS'IS_DATETIME_IN_RANGE'
+p349
+S"<class 'gluon.validators.IS_DATETIME_IN_RANGE'>"
+p350
+sS'FORM'
+p351
+S"<class 'gluon.html.FORM'>"
+p352
+sS'I'
+S"<class 'gluon.html.I'>"
+p353
+sS'IS_NOT_IN_DB'
+p354
+S"<class 'gluon.validators.IS_NOT_IN_DB'>"
+p355
+sg115
+S"<Storage {'body': <cStringIO.StringO object at 0...t 0x0392F870>, 'view': 'default/loginpage.html'}>"
+p356
+sS'THEAD'
+p357
+S"<class 'gluon.html.THEAD'>"
+p358
+sS'ANY_OF'
+p359
+S"<class 'gluon.validators.ANY_OF'>"
+p360
+sS'IS_NULL_OR'
+p361
+S"<class 'gluon.validators.IS_EMPTY_OR'>"
+p362
+sg56
+S"<Storage {'_vars': None, 'function': 'loginpage'...Luis\\\\Desktop\\\\web2py\\\\applications\\\\WagMore\\\\'}>"
+p363
+sS'IS_EXPR'
+p364
+S"<class 'gluon.validators.IS_EXPR'>"
+p365
+sS'T'
+S'<gluon.languages.translator object>'
+p366
+sS'IS_IN_SET'
+p367
+S"<class 'gluon.validators.IS_IN_SET'>"
+p368
+sS'IS_UPLOAD_FILENAME'
+p369
+S"<class 'gluon.validators.IS_UPLOAD_FILENAME'>"
+p370
+sS'TT'
+p371
+S"<class 'gluon.html.TT'>"
+p372
+sS'IS_DECIMAL_IN_RANGE'
+p373
+S"<class 'gluon.validators.IS_DECIMAL_IN_RANGE'>"
+p374
+sssS'traceback'
+p375
+S'Traceback (most recent call last):\n  File "C:\\Users\\Luis\\Desktop\\web2py\\gluon\\restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "C:\\Users\\Luis\\Desktop\\web2py\\applications\\WagMore\\views\\default/loginpage.html", line 17, in <module>\n    padding: 6px 10px;\nNameError: name \'form\' is not defined\n'
+p376
+s.
