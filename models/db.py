@@ -129,7 +129,6 @@ auth.settings.reset_password_requires_verification = True
 
 db.define_table('profile',
                 Field('name', requires=IS_NOT_EMPTY()),
-                Field('userID'),
                 Field('gender', requires=IS_IN_SET(['Male', 'Female', 'Other'])),
                 Field('birthDate','date', requires = IS_DATE(format='%Y-%m-%d',
                      error_message='must be YYYY-MM-DD!')),
@@ -139,6 +138,7 @@ db.define_table('profile',
                 Field('dogGender', requires=IS_IN_SET(['Male', 'Female', 'Other'])),
                 Field('dogAge','integer',  requires = IS_INT_IN_RANGE(0, 20,
                      error_message='Dog\'s age not possible!')))
+db.profile.id.writable = db.profile.id.readable = False
     ##widget=None
 db.define_table(
     'test1',

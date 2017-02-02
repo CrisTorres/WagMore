@@ -41,7 +41,7 @@
 			<div class="line">
 				<button type="button">Add another dog</button>
 			</div>
-            {{form.vars.userID2=10}}
+            {{form.vars.userID=10}}
             {{=form.custom.submit}}
             {{=form.custom.end}}
 		</div>

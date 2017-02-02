@@ -35,8 +35,15 @@ def createProfile_confirmation():
 
 @auth.requires_login()
 def mainPage():
+    if (db(db.profile.id==auth.user.id).count()==1):
+        redirect(URL("index"))
+    record = db.profile(request.args(0,cast=int)) or redirect(URL('index'))
+    db.profile.id.default=auth.user.id
+    form = SQLFORM(db.profile,record)
+    #form = SQLFORM(db.profile, buttons = [TAG.image(_type="submit", _href=URL("user"), _src= "http://127.0.0.1:8000/WagMore/static/_2.14.6/images/nextButton.png"),TAG.button('Submit',_type="submit")]) ##Wanna make the first image to work as a button
+    
+    db.profile.id.default=auth.user.id
     form = SQLFORM(db.profile)
-    form.vars.userID="VJSDN"
     if form.process().accepted:
         response.flash = 'form accepted'
     elif form.errors:
