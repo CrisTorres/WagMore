@@ -173,8 +173,23 @@ db.define_table(
     Field('activities', 'string', requires=IS_IN_SET(['Hiking', 'Partying', 'Working Out', 'Travel', 'Reading', 'Skydiving'])),
     Field('hobbies', 'string', requires=IS_IN_SET(['Games', 'Sciences', 'Art', 'Movies', 'Cooking', 'Guitar'])),
     Field('places', 'string', requires=IS_IN_SET(['Beach', 'Woods', 'Library', 'Concert', 'WorldMap', 'HomeWithDog'])),
-    Field('sports', 'string', requires=IS_IN_SET(['Tennis', 'RunningJogging', 'Football', 'Soccer', 'Basketball', 'Chess'])
-    )
+    Field('sports', 'string', requires=IS_IN_SET(['Tennis', 'RunningJogging', 'Football', 'Soccer', 'Basketball', 'Chess']))
+)
+
+db.define_table(
+	'personalities',
+	Field('id'),
+	Field('adventurous', 'integer'),
+	Field('bubbly', 'integer'),
+	Field('confident', 'integer'),
+	Field('conservative', 'integer'),
+	Field('creative', 'integer'),
+	Field('fiery', 'integer'),
+	Field('goofy', 'integer'),
+	Field('intellectual', 'integer'),
+	Field('introverted', 'integer'),
+	Field('openness', 'integer'),
+	Field('spontaneity', 'integer')
 )
 	
 # -------------------------------------------------------------------------
