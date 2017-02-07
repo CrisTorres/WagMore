@@ -81,7 +81,7 @@ def averInterests(Profile1, Profile2):
 
 # updateTraits takes in a user, and four traits, adds 2 points to one trait, 2 points to another, 1 point to another,
 #    and subtracts 1 point from another trait. Profile.personalities[trait] corresponds to the list of traits defined
-#    in the class (1 = adventurous, 2 = bubbly, etc.)
+#    in the class (0 = adventurous, 1 = bubbly, etc.)
 def updateTraits(Profile, trait1, trait2, trait3, trait4):
     Profile.personalities[trait1] += 2
     Profile.personalities[trait2] += 2
