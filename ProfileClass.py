@@ -2,13 +2,25 @@ import math
 
 # The profile for the user. We will store each profile in the SQLLite database upon each new instance of a Profile class.
 class Profile:
-    def __init__(self, userName, dogName, location, adven=0, bubbl=0, confi=0,
+    def __init__(self, userName, dogName, location, foodsBreakfast=0, foodsBurger=0, foodsFruits=0, foodsPizza=0, foodsSushi=0, foodsTaco=0,
+            activHiking=0, activReading=0, activSkydiving=0, activTravel=0, activWorkout=0, activWine=0,
+            hobbyArt=0, hobbyCooking=0, hobbyGames=0, hobbyGuitar=0, hobbyPhotography=0, hobbyScience=0,
+            placeBeach=0, placeConcert=0, placeHome=0, placeLibrary=0, placeWoods=0, placeWorld=0,
+            sportBasketball=0, sportChess=0, sportFootball=0, sportRunning=0, sportSoccer=0, sportTennis=0,
+                 adven=0, bubbl=0, confi=0,
                  conse=0, creat=0, fiery=0, goofy=0,
-                 intel=0, intro=0, openn=0, spont=0):
+                 intel=0, intro=0, openn=0, spont=0,
+                 ):
         self.uname = userName
         self.dname = dogName
         self.locat = location
-        self.interests = []
+        self.interests = [
+            foodsBreakfast, foodsBurger, foodsFruits, foodsPizza, foodsSushi, foodsTaco,
+            activHiking, activReading, activSkydiving, activTravel, activWorkout, activWine,
+            hobbyArt, hobbyCooking, hobbyGames, hobbyGuitar, hobbyPhotography, hobbyScience,
+            placeBeach, placeConcert, placeHome, placeLibrary, placeWoods, placeWorld,
+            sportBasketball, sportChess, sportFootball, sportRunning, sportSoccer, sportTennis
+        ]
         self.questions = []
         # 10 personality traits to help with the Matching Algorithm:
         self.adven = adven #adventurous
@@ -26,18 +38,19 @@ class Profile:
         self.personalities = [adven, bubbl, confi, conse, creat, fiery, goofy, intel, intro, openn, spont]
 
     # when the user selects an image, append it to the Interest Collage
-    def add_interestCollage(self, interest):
-        self.interests.append(interest)
 
     # when the user unselects an image, take it away from the Interest Collage
-    def delete_interestCollage(self, interest):
-        self.interests.pop(interest)
+    def delete_interestCollage(self, key):
+        self.interests[key]=False
 
     # when the user answers a queston, append it to their questions answered
     def add_questionsBank(self, question):
         self.questions.append(question)
 
 # averAll returns the overall match percentage based on personalities
+def add_interestCollage(Profile, key):
+    Profile.interests[key]=1
+
 def averAll(Profile1, Profile2):
     total = 0
     for i in Profile1.personalities and Profile2.personalities:
@@ -57,17 +70,14 @@ def averAny(Profile1, Profile2, traitKey):
     else:
         return math.ceil((numerator/divByZeroFix) * 100)
 
-def averInterests(Profile1, interests1, Profile2, interests2):
+def averInterests(Profile1, Profile2):
     interestsCount = 0
-    # must sort so we can do a one-to-one mapping of each trait
-    interests1.sort()
-    interests2.sort()
-    for i in interests1:
-        for j in interests2:
-            if i == j:
-                interestsCount += 1
-    interestsPercentage = math.ceil((interestsCount/(max(len(interests1), len(interests2)))) * 100)
-    return interestsPercentage
+    for i in range(len(Profile1.interests)):
+        if Profile1.interests[i]==Profile2.interests[i]==1:
+            interestsCount += 1
+    return math.ceil((interestsCount/10)*150)
+    # interests match higher than questions, so we multiply by 150%. If the total match
+    # goes above 100%, it will just be 100%
 
 # updateTraits takes in a user, and four traits, adds 2 points to one trait, 2 points to another, 1 point to another,
 #    and subtracts 1 point from another trait. Profile.personalities[trait] corresponds to the list of traits defined
@@ -111,15 +121,20 @@ def question1(Profile):
             print("Invalid input. Please enter a valid input.")
 
 """
-# here I test the classes + algorithms:
+#here I test the classes + algorithms:
 Jimbob = Profile("JimBob", "Steve", "Santa Cruz")
 Marylou = Profile("MaryLou", "Juju", "Santa Cruz")
+basketball = 24
 
-Jimbob.add_interestCollage("food")
-Marylou.add_interestCollage("food")
-Jimbob.add_interestCollage("cats")
-Marylou.add_interestCollage("hockey")
-Marylou.add_interestCollage("cats")
+add_interestCollage(Jimbob, 0) #Jimbob likes Breakfast Foods
+add_interestCollage(Jimbob, 1) #Jimbob likes Burgers
+add_interestCollage(Marylou, 0) #Marylou also likes Breakfast Foods
+add_interestCollage(Marylou, 1) #Marylou also likes Burgers
+add_interestCollage(Jimbob, basketball) #Jimbob likes Basketball
+add_interestCollage(Marylou, basketball) #Marylou also likes Breakfast Foods
+print(Jimbob.interests[0])
+print(Marylou.interests[0])
+print(averInterests(Jimbob, Marylou))
 
 print(Jimbob.intel)
 print(Jimbob.personalities[7], Jimbob.personalities[4], Jimbob.personalities[1], Jimbob.personalities[5])
@@ -134,17 +149,25 @@ question1(Marylou)
 print(Marylou.personalities[7], Marylou.personalities[4], Marylou.personalities[1], Marylou.personalities[5])
 
 
-print(Jimbob.uname) #print Jimbob's name
-print(Jimbob.dname)
+print("Name of Profile1: ", Jimbob.uname) #print Jimbob's name
+print("Name of Profile1's Dog: ", Jimbob.dname)
 
-print(averInterests(Jimbob, Jimbob.interests, Marylou, Marylou.interests)) #should print 67
-print(averAny(Jimbob, Marylou, 0)) #averages the adventurous trait
-print(averAny(Jimbob, Marylou, 1)) #averages the bubbly trait
-Jimbob.add_interestCollage("tennis")
-Jimbob.add_interestCollage("hiking")
-Jimbob.add_interestCollage("mario")
-print(averInterests(Jimbob, Jimbob.interests, Marylou, Marylou.interests)) #should print 40
-print(averAll(Jimbob, Marylou)) #prints the average of all the interests
-totalMatch = ((averInterests(Jimbob, Jimbob.interests, Marylou, Marylou.interests)+averAll(Jimbob, Marylou))/2)
-print(totalMatch)
+print("Adventurous Match%: ", averAny(Jimbob, Marylou, 0))
+print("Adventurous Match%: ", averAny(Jimbob, Marylou, 1))
+print("Adventurous Match%: ", averAny(Jimbob, Marylou, 2))
+print("Adventurous Match%: ", averAny(Jimbob, Marylou, 3))
+print("Adventurous Match%: ", averAny(Jimbob, Marylou, 4))
+print("Adventurous Match%: ", averAny(Jimbob, Marylou, 5))
+print("Adventurous Match%: ", averAny(Jimbob, Marylou, 6))
+print("Adventurous Match%: ", averAny(Jimbob, Marylou, 7))
+print("Adventurous Match%: ", averAny(Jimbob, Marylou, 8))
+print("Adventurous Match%: ", averAny(Jimbob, Marylou, 9))
+print("Adventurous Match%: ", averAny(Jimbob, Marylou, 10))
+
+print("Match% for INTERESTS: ", averInterests(Jimbob, Marylou)) #should print 45
+print("Adventurous Match%: ", averAny(Jimbob, Marylou, 0)) #averages the adventurous trait
+print("Bubbly Match%: ", averAny(Jimbob, Marylou, 1)) #averages the bubbly trait
+print("Average Personality Match%: ", averAll(Jimbob, Marylou)) #prints the average of all the interests
+totalMatch = ((averInterests(Jimbob, Marylou)+averAll(Jimbob, Marylou))/2)
+print("Total match%:", totalMatch)
 """
