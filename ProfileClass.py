@@ -41,7 +41,7 @@ class Profile:
 
     # when the user unselects an image, take it away from the Interest Collage
     def delete_interestCollage(self, key):
-        self.interests[key]=False
+        self.interests[key]=0
 
     # when the user answers a queston, append it to their questions answered
     def add_questionsBank(self, question):
