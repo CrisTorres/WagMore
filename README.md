@@ -8,4 +8,5 @@
 
 # Sprint 2 Report: https://docs.google.com/a/ucsc.edu/document/d/1b7mlFbVwCkNuOz9VrsMbfyi1gx0nBXwugHFqO9-nXic/edit?usp=sharing
 
-#Sprint 3 Plan :https://docs.google.com/a/ucsc.edu/document/d/1FBSoSQ6mjT17BqAKtp_gbLS3NgTvTUt-Qpr7AHZcngM/edit?usp=sharing
+# Sprint 3 Plan :https://docs.google.com/a/ucsc.edu/document/d/1FBSoSQ6mjT17BqAKtp_gbLS3NgTvTUt-Qpr7AHZcngM/edit?usp=sharing
+# Sprint 3 Report: https://docs.google.com/a/ucsc.edu/document/d/1L1KVpzPajKgwZynruxecxg-yAgRZsy36HRMIuwMvbEM/edit?usp=sharing
